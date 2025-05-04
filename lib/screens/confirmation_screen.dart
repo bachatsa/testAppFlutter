@@ -176,7 +176,7 @@ class _ConfirmationScreenState extends State<ConfirmationScreen> {
                 Container(
                   decoration: BoxDecoration(
                     color: Colors.white,
-                    border: Border.all(color: const Color(0xFFEEEEEE)),
+                    // border: Border.all(color: const Color(0xFFEEEEEE)),
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Theme(
@@ -270,7 +270,7 @@ class _ConfirmationScreenState extends State<ConfirmationScreen> {
                 Container(
                   decoration: BoxDecoration(
                     color: Colors.white,
-                    border: Border.all(color: const Color(0xFFEEEEEE)),
+                    // border: Border.all(color: const Color(0xFFEEEEEE)),
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Theme(
