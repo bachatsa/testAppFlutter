@@ -13,20 +13,18 @@ class DashboardScreen extends StatefulWidget {
 
 class _DashboardScreenState extends State<DashboardScreen> {
   int _selectedIndex = 0;
-  int _selectedTab = 0; // 0 untuk Semua Fitur, 1 untuk VMS
+  int _selectedTab = 0;
   DateTime _currentTime = DateTime.now();
-  Timer? _timer; // Menambahkan variable Timer
+  Timer? _timer; 
 
-  // Mirip seperti useEffect untuk timer
   void _startTimeUpdate() {
-    // Cleanup function (mirip dengan return di useEffect)
+   
     void cleanup() {
       _timer?.cancel();
       _timer = null;
     }
 
-    // Setup timer (mirip dengan effect function di useEffect)
-    cleanup(); // Membersihkan timer yang mungkin masih ada
+    cleanup();
     _timer = Timer.periodic(const Duration(seconds: 1), (timer) {
       if (mounted) {
         setState(() {
@@ -41,12 +39,12 @@ class _DashboardScreenState extends State<DashboardScreen> {
   @override
   void initState() {
     super.initState();
-    _startTimeUpdate(); // Memulai effect
+    _startTimeUpdate(); 
   }
 
   @override
   void dispose() {
-    _timer?.cancel(); // Membersihkan effect
+    _timer?.cancel();
     super.dispose();
   }
 
